@@ -6,7 +6,7 @@
 #    By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/22 17:31:07 by srikuto           #+#    #+#              #
-#    Updated: 2024/11/22 19:22:23 by srikuto          ###   ########.fr        #
+#    Updated: 2024/11/22 21:58:11 by srikuto          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,4 +21,32 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 		ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c\
 		ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
 		ft_putnbr_fd.c
-OBJC = $(SRC:.c=.o)
+
+NAME = libft.a
+OBJC = $(SRCS:.c=.o)
+OBJCB = $(SRCSB:.c=.o)
+RM = rm -f
+AR = ar rc
+
+ifeq ($(MAKECMDGOALS), bonus)
+        OBJ = $(OBJC) $(OBJCB)
+else
+        OBJ = $(OBJC)
+endif
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+        $(AR) $@ $^
+		
+%.o: %.c libft.h
+        $(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+                 $(RM) $(OBJC) $(OBJCB)
+
+fclean: clean
+                $(RM) $(NAME)
+
+re: fclean all
+.PHONY: all clean fclean re
