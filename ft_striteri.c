@@ -3,14 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 17:19:25 by srikuto           #+#    #+#             */
-/*   Updated: 2024/11/22 17:20:20 by srikuto          ###   ########.fr       */
+/*   Updated: 2024/11/23 14:31:05 by sometani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+#include <stdio.h>
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
+    unsigned int i;
 	
+    if (s == NULL || f == NULL)
+        return;
+	i = 0;
+    while (s[i])
+	{
+        f(i, &s[i]);
+        i++;
+    }
 }

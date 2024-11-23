@@ -3,85 +3,121 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 19:01:34 by srikuto           #+#    #+#             */
-/*   Updated: 2024/11/22 17:54:10 by srikuto          ###   ########.fr       */
+/*   Updated: 2024/11/23 14:16:14 by sometani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-size_t	word_count(const char *s, char c)
+size_t word_count(char const *s, char c)
 {
-	size_t	i;
-	size_t	count;
+    size_t count = 0;
+    size_t i = 0;
 
-	i = 0;
-	count = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-		{
-			count++;
-			while (s[i] == c)
-				i++;
-		}
-		else
-			i++;
-	}
-	return (count + 1);
+    while (s[i] != '\0')
+    {
+        if (s[i] == c && s[i + 1] != c)
+            count++;
+        i++;
+    }
+    return (count + 1);
 }
-char	**assign_chars(char **word_count_t, const char *s, char c)
+
+char **malloc_word_len(char **split, char const *s, char c)
 {
-	size_t	i;
-	size_t	j;
+    size_t i = 0;
+    size_t word_len = 0;
 
-	i = 0;
-	while (*s != '\0')
-	{
-		j = 0;
-		while (*s != c)
-		{
-			word_count_t[i][j] = *s;
-			j++;
-			s++;
-		}
-		i++;
-		s++;
-	}
-	return (word_count_t);
+    while (*s != '\0')
+    {
+        if (*s != c)
+        {
+            word_len = 0;
+            while (*s != c && *s != '\0')
+            {
+                s++;
+                word_len++;
+            }
+            split[i] = (char *)malloc(sizeof(char) * (word_len + 1));
+            if (split[i] == NULL) 
+                return NULL;
+            i++;
+        }
+        else
+            s++;
+    }
+    split[i] = NULL; 
+    return split;
 }
-char	**ft_split(char const *s, char c)
+
+char **assign_char(char **split, const char *s, char c)
 {
-	size_t	i;
-	size_t	j;
-	char	**word_count_t;
+    size_t i = 0;
+    size_t k = 0;
+    size_t j;
 
-	word_count_t = (char **)malloc(word_count(s, c) + 1);
-	while (*s != '\0')
-	{
-		i = 0;
-		if (*s != c)
-		{
-			while (*s != c && *s != '\0')
-			{
-				s++;
-				i++;
-			}
-			if (*s == c)
-				word_count_t[j] = (char *)malloc(i);
-		}
-		s++;
-	}
-	return (assign_chars(word_count_t, s, c));
+    while (s[k] != '\0')
+    {
+        if (s[k] != c)
+        {
+            j = 0;
+            while (s[k] != c && s[k] != '\0')
+            {
+                split[i][j] = s[k];
+                k++;
+                j++;
+            }
+            split[i][j] = '\0';
+            i++;
+        }
+        else
+            k++;
+    }
+    return split;
 }
-// int main(void)
-// {
-// 	char c = ' ';
-// 	char *str = "hello, I am a 42 student";
 
-// 	char **result = ft_split(str, c);
-// 	return(0);
-// }
+char **ft_split(char const *s, char c)
+{
+    if (s == NULL)
+        return NULL;
+
+    size_t num_words = word_count(s, c);
+    char **str = (char **)malloc(sizeof(char *) * (num_words + 1));
+
+    if (str == NULL)
+        return NULL;
+
+    char **split = malloc_word_len(str, s, c);
+    if (split == NULL)
+    {
+        free(str);
+        return NULL;
+    }
+
+    return assign_char(split, s, c);
+}
+
+int main()
+{
+    const char *str = "This is a sample string to split";
+    char delimiter = ' ';
+    char **result = ft_split(str, delimiter);
+
+    if (result != NULL)
+    {
+        for (int i = 0; result[i] != NULL; i++)
+        {
+            printf("Word %d: %s\n", i + 1, result[i]);
+            free(result[i]);
+        }
+        free(result);
+    }
+    else
+        printf("Error in memory allocation\n");
+
+    return 0;
+}

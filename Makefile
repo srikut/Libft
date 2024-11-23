@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+         #
+#    By: sometani <sometani@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/22 17:31:07 by srikuto           #+#    #+#              #
-#    Updated: 2024/11/22 21:58:11 by srikuto          ###   ########.fr        #
+#    Updated: 2024/11/23 02:42:55 by sometani         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,24 +29,24 @@ RM = rm -f
 AR = ar rc
 
 ifeq ($(MAKECMDGOALS), bonus)
-        OBJ = $(OBJC) $(OBJCB)
+	OBJ = $(OBJC) $(OBJCB)
 else
-        OBJ = $(OBJC)
+	OBJ = $(OBJC)
 endif
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-        $(AR) $@ $^
-		
+	$(AR) $@ $^
+
 %.o: %.c libft.h
-        $(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-                 $(RM) $(OBJC) $(OBJCB)
+	$(RM) $(OBJC) $(OBJCB)
 
 fclean: clean
-                $(RM) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 .PHONY: all clean fclean re
