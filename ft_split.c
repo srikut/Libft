@@ -6,7 +6,7 @@
 /*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 19:01:34 by srikuto           #+#    #+#             */
-/*   Updated: 2024/11/23 14:16:14 by sometani         ###   ########.fr       */
+/*   Updated: 2024/11/27 15:57:53 by sometani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t word_count(char const *s, char c)
     size_t count = 0;
     size_t i = 0;
 
+	while(s[i] == " ")
+		i++;
     while (s[i] != '\0')
     {
         if (s[i] == c && s[i + 1] != c)

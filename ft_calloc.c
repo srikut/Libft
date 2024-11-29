@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 17:04:08 by srikuto           #+#    #+#             */
-/*   Updated: 2024/11/22 17:52:44 by srikuto          ###   ########.fr       */
+/*   Updated: 2024/11/27 10:06:24 by sometani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include<stdlib.h>
 
 void	*calloc(size_t nmemb, size_t size)
 {
@@ -18,6 +19,7 @@ void	*calloc(size_t nmemb, size_t size)
 	size_t total_size;
 	void *str = (void *)malloc(nmemb * size);
 
+	total_size = nmemb * size;
 	if (!str && total_size / nmemb != size)
 		return (NULL);
 	i = nmemb * size;
