@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
+/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 19:01:34 by srikuto           #+#    #+#             */
-/*   Updated: 2024/12/30 15:36:18 by sometani         ###   ########.fr       */
+/*   Updated: 2025/01/01 21:02:08 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,6 @@ char **ft_split(char const *s, char c)
         free(str);
         return NULL;
     }
-
     return assign_char(split, s, c);
 }
 
