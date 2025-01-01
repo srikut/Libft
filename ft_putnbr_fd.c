@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:42:16 by srikuto           #+#    #+#             */
-/*   Updated: 2024/11/22 17:53:55 by srikuto          ###   ########.fr       */
+/*   Updated: 2024/12/03 21:53:38 by sometani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int	sign(int nb, int fd)
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int i;
-	char c;
-	int num[100];
+	int		i;
+	char	c;
+	int		num[100];
 
 	if (n == -2147483648)
 	{

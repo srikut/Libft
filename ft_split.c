@@ -6,7 +6,7 @@
 /*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 19:01:34 by srikuto           #+#    #+#             */
-/*   Updated: 2024/11/27 15:57:53 by sometani         ###   ########.fr       */
+/*   Updated: 2024/12/30 15:36:18 by sometani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t word_count(char const *s, char c)
     size_t count = 0;
     size_t i = 0;
 
-	while(s[i] == " ")
+	while(s[i] == ' ')
 		i++;
     while (s[i] != '\0')
     {
@@ -103,23 +103,23 @@ char **ft_split(char const *s, char c)
     return assign_char(split, s, c);
 }
 
-int main()
-{
-    const char *str = "This is a sample string to split";
-    char delimiter = ' ';
-    char **result = ft_split(str, delimiter);
+// int main()
+// {
+//     const char *str = "This is a sample string to split";
+//     char delimiter = ' ';
+//     char **result = ft_split(str, delimiter);
 
-    if (result != NULL)
-    {
-        for (int i = 0; result[i] != NULL; i++)
-        {
-            printf("Word %d: %s\n", i + 1, result[i]);
-            free(result[i]);
-        }
-        free(result);
-    }
-    else
-        printf("Error in memory allocation\n");
+//     if (result != NULL)
+//     {
+//         for (int i = 0; result[i] != NULL; i++)
+//         {
+//             printf("Word %d: %s\n", i + 1, result[i]);
+//             free(result[i]);
+//         }
+//         free(result);
+//     }
+//     else
+//         printf("Error in memory allocation\n");
 
-    return 0;
-}
+//     return 0;
+// }

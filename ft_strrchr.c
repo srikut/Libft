@@ -3,27 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 18:15:34 by srikuto           #+#    #+#             */
-/*   Updated: 2024/11/22 17:55:20 by srikuto          ###   ########.fr       */
+/*   Updated: 2024/12/31 19:49:35 by sometani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
+#include <string.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	const char *s_original = s;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	while (i >= 0)
+	s = s + ft_strlen(s);
+	while (s >= s_original)
 	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i--;
+		 if (*s == (char)c)
+            return (char *)s;
+        s--;   
 	}
-	return (NULL);
+	return(NULL);
 }
+// int main(void)
+// {
+// 	char *s = "i am a student!";
+// 	char c = 'a';
+
+// 	printf("%p\n", ft_strrchr(s, c));
+// 	printf("%p\n", strrchr(s, c));
+// 	return(0);
+// }

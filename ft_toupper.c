@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 17:26:21 by srikuto           #+#    #+#             */
-/*   Updated: 2024/11/22 17:55:35 by srikuto          ###   ########.fr       */
+/*   Updated: 2024/12/04 17:48:50 by sometani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_toupper(int c)
 {
-	if (97 < c && c < 122)
+	if (97 <= c && c <= 122)
 		c = c - 32;
 	return (c);
 }

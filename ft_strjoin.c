@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:15:03 by srikuto           #+#    #+#             */
-/*   Updated: 2024/11/22 17:54:46 by srikuto          ###   ########.fr       */
+/*   Updated: 2024/12/03 22:01:50 by sometani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	all_len(char const *s1, char const *s2)
 		s2len++;
 	return (s1len + s2len);
 }
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;
