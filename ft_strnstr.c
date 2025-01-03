@@ -6,13 +6,11 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 21:34:23 by srikuto           #+#    #+#             */
-/*   Updated: 2025/01/03 22:31:56 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 22:40:57 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

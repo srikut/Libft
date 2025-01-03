@@ -6,12 +6,11 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 19:01:34 by srikuto           #+#    #+#             */
-/*   Updated: 2025/01/03 19:47:36 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 22:39:50 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static char	**free_all(char **split, size_t i)
 {

@@ -6,15 +6,13 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 16:05:54 by srikuto           #+#    #+#             */
-/*   Updated: 2025/01/03 22:32:30 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 23:21:45 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-int	error_check(char const *s)
+static int	error_check(char const *s)
 {
 	unsigned int	str_len;
 

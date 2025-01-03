@@ -6,7 +6,7 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 17:01:14 by srikuto           #+#    #+#             */
-/*   Updated: 2025/01/03 22:27:07 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 22:42:26 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <limits.h>
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);

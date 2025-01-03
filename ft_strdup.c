@@ -6,12 +6,11 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 17:32:51 by srikuto           #+#    #+#             */
-/*   Updated: 2025/01/03 17:54:52 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 22:39:56 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {

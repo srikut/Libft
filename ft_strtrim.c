@@ -6,25 +6,13 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 18:35:26 by srikuto           #+#    #+#             */
-/*   Updated: 2025/01/03 20:51:00 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 23:21:37 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
-// size_t	ft_strlen(const char *s)
-// {
-// 	size_t	len;
-
-// 	len = 0;
-// 	while (s[len])
-// 		len++;
-// 	return (len);
-// }
-
-int	ft_is_in_set(char c, const char *set)
+static int	ft_is_in_set(char c, const char *set)
 {
 	while (*set)
 	{

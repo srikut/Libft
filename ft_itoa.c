@@ -6,12 +6,11 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 17:14:49 by srikuto           #+#    #+#             */
-/*   Updated: 2025/01/03 17:17:18 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 23:25:00 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-#include <stdlib.h>
 
 static size_t	int_len(long n)
 {
@@ -33,7 +32,7 @@ static size_t	int_len(long n)
 	return (lengs);
 }
 
-void	int_to_str_re(long n, char *str, int *index, size_t flag)
+static void	int_to_str_re(long n, char *str, size_t *index, size_t flag)
 {
 	if (n < 0)
 	{
@@ -51,7 +50,7 @@ void	int_to_str_re(long n, char *str, int *index, size_t flag)
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int		index;
+	size_t	index;
 	size_t	flag;
 
 	str = malloc(int_len(n) + 1);

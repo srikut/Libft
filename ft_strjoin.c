@@ -6,14 +6,13 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:15:03 by srikuto           #+#    #+#             */
-/*   Updated: 2025/01/03 21:31:31 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 23:21:14 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int	all_len(char const *s1, char const *s2)
+static int	all_len(char const *s1, char const *s2)
 {
 	size_t	s1len;
 	size_t	s2len;

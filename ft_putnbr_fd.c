@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
+/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:42:16 by srikuto           #+#    #+#             */
-/*   Updated: 2024/12/03 21:53:38 by sometani         ###   ########.fr       */
+/*   Updated: 2025/01/03 23:32:42 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-int	sign(int nb, int fd)
+static int	sign(int nb, int fd)
 {
 	if (nb < 0)
 	{

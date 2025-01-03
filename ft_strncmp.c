@@ -6,11 +6,11 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 20:37:56 by srikuto           #+#    #+#             */
-/*   Updated: 2025/01/03 22:03:55 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 22:40:51 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

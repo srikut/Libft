@@ -6,11 +6,11 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:38:49 by srikuto           #+#    #+#             */
-/*   Updated: 2025/01/03 22:30:47 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 22:39:35 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

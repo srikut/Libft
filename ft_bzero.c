@@ -6,12 +6,11 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:48:44 by srikuto           #+#    #+#             */
-/*   Updated: 2024/11/22 17:52:28 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 22:36:23 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <strings.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

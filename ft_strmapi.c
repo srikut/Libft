@@ -6,12 +6,10 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:17:13 by srikuto           #+#    #+#             */
-/*   Updated: 2025/01/03 22:20:56 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 22:40:47 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

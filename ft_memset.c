@@ -6,12 +6,11 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 20:27:38 by srikuto           #+#    #+#             */
-/*   Updated: 2024/11/22 17:53:40 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 22:39:24 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

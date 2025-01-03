@@ -6,12 +6,11 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 22:23:43 by srikuto           #+#    #+#             */
-/*   Updated: 2024/11/22 17:51:16 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 22:35:55 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

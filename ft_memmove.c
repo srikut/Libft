@@ -6,11 +6,11 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 15:02:05 by srikuto           #+#    #+#             */
-/*   Updated: 2025/01/03 21:58:11 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 22:39:19 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
