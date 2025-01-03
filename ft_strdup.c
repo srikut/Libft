@@ -6,7 +6,7 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 17:32:51 by srikuto           #+#    #+#             */
-/*   Updated: 2025/01/01 18:25:51 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 17:54:52 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 
 char	*ft_strdup(const char *s)
 {
-	size_t i ;
-	char *str;
+	size_t	i ;
+	char	*str;
 
 	i = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 		i++;
 	str = (char *)malloc(i + 1);
 	if (!str)
 		return (NULL);
-	 i = 0;
+	i = 0;
 	while (s[i] != '\0')
 	{
 		str[i] = s[i];

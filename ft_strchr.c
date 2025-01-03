@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
+/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 17:54:35 by srikuto           #+#    #+#             */
-/*   Updated: 2024/12/30 13:16:44 by sometani         ###   ########.fr       */
+/*   Updated: 2025/01/03 17:53:54 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strchr(const char *str, int c)
 	{
 		if (*str == (char)c)
 			return ((char *)str);
-		if(*str == '\0')
-			return(NULL);
+		if (*str == '\0')
+			return (NULL);
 		str++;
 	}
 }

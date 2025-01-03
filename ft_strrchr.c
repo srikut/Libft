@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sometani <sometani@student.42.fr>          +#+  +:+       +#+        */
+/*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 18:15:34 by srikuto           #+#    #+#             */
-/*   Updated: 2024/12/31 19:49:35 by sometani         ###   ########.fr       */
+/*   Updated: 2025/01/03 18:00:19 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,19 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char *s_original = s;
+	const char	*s_original;
 
+	s_original = s;
 	s = s + ft_strlen(s);
 	while (s >= s_original)
 	{
-		 if (*s == (char)c)
-            return (char *)s;
-        s--;   
+		if (*s == (char)c)
+			return ((char *)s);
+		s--;
 	}
-	return(NULL);
+	return (NULL);
 }
+
 // int main(void)
 // {
 // 	char *s = "i am a student!";
