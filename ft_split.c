@@ -6,30 +6,43 @@
 /*   By: srikuto <srikuto@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 19:01:34 by srikuto           #+#    #+#             */
-/*   Updated: 2025/01/01 21:02:08 by srikuto          ###   ########.fr       */
+/*   Updated: 2025/01/03 16:52:06 by srikuto          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-size_t word_count(char const *s, char c)
+static char **free_all(char **split, size_t i)
+{
+    size_t idx = 0;
+    while (idx < i)
+    {
+        free(split[idx]);
+        idx++;
+    }
+    free(split);
+    return NULL;
+}
+static size_t word_count(const char *s, char c)
 {
     size_t count = 0;
-    size_t i = 0;
 
-	while(s[i] == ' ')
-		i++;
-    while (s[i] != '\0')
+    while (*s != '\0')
     {
-        if (s[i] == c && s[i + 1] != c)
+        while (*s == c)
+            s++;
+        if (*s != '\0')
+        {
             count++;
-        i++;
+            while (*s != '\0' && *s != c)
+                s++;
+        }
     }
-    return (count + 1);
+    return count;
 }
 
-char **malloc_word_len(char **split, char const *s, char c)
+static char **malloc_word_len(char **split, char const *s, char c)
 {
     size_t i = 0;
     size_t word_len = 0;
@@ -45,8 +58,8 @@ char **malloc_word_len(char **split, char const *s, char c)
                 word_len++;
             }
             split[i] = (char *)malloc(sizeof(char) * (word_len + 1));
-            if (split[i] == NULL) 
-                return NULL;
+            if (!split[i]) 
+                return free_all(split, i);
             i++;
         }
         else
@@ -56,7 +69,7 @@ char **malloc_word_len(char **split, char const *s, char c)
     return split;
 }
 
-char **assign_char(char **split, const char *s, char c)
+static char **assign_char(char **split, const char *s, char c)
 {
     size_t i = 0;
     size_t k = 0;
